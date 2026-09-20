@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haochao Machinery Co., Ltd. | Large CNC Machining, Floor Boring & Welding</title>
+  <meta name="description" content="Haochao Machinery Co., Ltd. specializes in large-scale machining, floor-type boring & milling, heavy CNC machining and welding fabrication for industrial parts." />
+  <meta name="keywords" content="large machining, floor boring, floor type boring mill, heavy CNC machining, welding fabrication, China machining factory" />
+  <style>
+    :root {
+      --navy: #0b1f33;
+      --blue: #1565c0;
+      --orange: #ff7a00;
+      --gray: #f5f7fa;
+      --border: #e2e8f0;
+      --text: #1f2933;
+      --muted: #64748b;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(11, 31, 51, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: .5px;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .logo span { color: var(--orange); }
+    .logo small {
+      display: block;
+      font-size: .68rem;
+      letter-spacing: 1.6px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: .94rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+
+    .nav-cta {
+      background: var(--orange);
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 999px;
+    }
+
+    .nav-cta:hover { background: #e66a00; }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--navy);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0b1f33 0%, #12395c 55%, #1565c0 100%);
+      color: #fff;
+      padding: 100px 0 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -120px;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: rgba(255,122,0,.12);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .5px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4.6vw, 3.6rem);
+      line-height: 1.12;
+      letter-spacing: -1px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span { color: #ffb36b; }
+
+    .hero p {
+      font-size: 1.06rem;
+      color: #dbeafe;
+      max-width: 700px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: .96rem;
+      transition: .2s;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary { background: var(--orange); color: #fff; }
+    .btn-primary:hover { background: #e66a00; transform: translateY(-1px); }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.45);
+      color: #fff;
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+
+    .hero-card {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 20px;
+      padding: 28px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card h3 {
+      font-size: 1.02rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+    }
+
+    .hero-card li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: .94rem;
+      color: #e0f2fe;
+    }
+
+    .hero-card li::before {
+      content: "✓";
+      color: #ffb36b;
+      font-weight: 900;
+    }
+
+    /* Trust bar */
+    .trust-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 22px 0;
+    }
+
+    .trust-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px 38px;
+      color: var(--muted);
+      font-size: .9rem;
+      font-weight: 800;
+    }
+
+    .trust-items span { display: flex; align-items: center; gap: 8px; }
+    .trust-items span::before { content: "●"; color: var(--orange); font-size: .65rem; }
+
+    /* Sections */
+    section { padding: 86px 0; }
+    .section-gray { background: var(--gray); }
+
+    .section-head {
+      max-width: 800px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-head .tag {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 14px;
+      letter-spacing: -.5px;
+    }
+
+    .section-head p { color: var(--muted); font-size: 1.02rem; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(11,31,51,.04);
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-icon { font-size: 2rem; margin-bottom: 16px; }
+    .card h3 { color: var(--navy); font-size: 1.12rem; margin-bottom: 10px; }
+    .card p { color: var(--muted); font-size: .95rem; }
+
+    /* Materials */
+    .materials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .material-chip {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-weight: 800;
+      color: #334155;
+      font-size: .9rem;
+    }
+
+    /* Equipment */
+    .equipment-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .equipment-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      border-radius: 10px;
+      padding: 18px 20px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .equipment-item small {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* Quality */
+    .quality-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(11,31,51,.04);
+    }
+
+    .quality-box h3 { color: var(--navy); margin-bottom: 16px; }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 10px;
+      color: #475569;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--orange);
+      font-weight: 900;
+    }
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .process-step {
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 18px;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+
+    .process-step h4 { color: var(--navy); font-size: .96rem; margin-bottom: 8px; }
+    .process-step p { color: var(--muted); font-size: .85rem; }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--navy);
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    details p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 18px;
+      padding: 36px;
+    }
+
+    .contact-info h3 { font-size: 1.4rem; margin-bottom: 18px; }
+    .contact-info p { color: #cbd5e1; margin-bottom: 24px; }
+
+    .contact-line {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: #e2e8f0;
+      font-size: .95rem;
+    }
+
+    .contact-line strong { color: #fff; }
+
+    .quote-form {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group { margin-bottom: 16px; }
+
+    .form-group label {
+      display: block;
+      font-size: .88rem;
+      font-weight: 800;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: .95rem;
+      font-family: inherit;
+      outline: none;
+      transition: .2s;
+      background: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(21,101,192,.12);
+    }
+
+    .form-group textarea { min-height: 110px; resize: vertical; }
+
+    .form-msg {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      border-radius: 10px;
+      font-size: .92rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #071727;
+      color: #94a3b8;
+      padding: 42px 0 28px;
+      font-size: .9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    footer h4 { color: #fff; margin-bottom: 12px; font-size: .95rem; }
+    footer a:hover { color: #fff; }
+
+    .copyright {
+      border-top: 1px solid #1e293b;
+      padding-top: 22px;
+      text-align: center;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero-grid, .contact-grid, .grid-2 { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 820px) {
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px 4%;
+        gap: 18px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 12px 24px rgba(11,31,51,.08);
+        display: none;
+      }
+
+      .nav-links.active { display: flex; }
+      .nav-cta { width: 100%; text-align: center; }
+
+      .hero { padding: 72px 0 64px; }
+      section { padding: 64px 0; }
+
+      .grid-3, .equipment-list, .process-grid, .form-row, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-form, .contact-info { padding: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="logo">
+        HAOCHAO <span>MACHINERY</span>
+        <small>浩潮机械有限公司</small>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#industries">Industries</a>
+        <a href="#quality">Quality</a>
+        <a href="#faq">FAQ</a>
+        <a href="#quote" class="nav-cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Large-Scale Machining & Welding Factory</span>
+        <h1>Heavy Machining, <span>Floor Boring</span> & Welding Solutions</h1>
+        <p>
+          Haochao Machinery Co., Ltd. specializes in large-scale machining, floor-type boring & milling,
+          heavy CNC machining and welding fabrication for industrial parts. From single large components
+          to batch production, we support global customers with reliable quality and fast response.
+        </p>
+        <div class="hero-actions">
+          <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+          <a href="#capabilities" class="btn btn-outline">View Capabilities</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Why Choose Haochao Machinery</h3>
+        <ul>
+          <li>Large part machining capability</li>
+          <li>Floor-type boring & milling</li>
+          <li>Heavy welding & fabrication</li>
+          <li>Drawing-based custom manufacturing</li>
+          <li>Strict inspection before shipment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="container trust-items">
+      <span>Floor-Type Boring & Milling</span>
+      <span>Heavy CNC Machining</span>
+      <span>Welding & Fabrication</span>
+      <span>Large Part Turning</span>
+      <span>Custom OEM Parts</span>
+    </div>
+  </div>
+
+  <!-- Capabilities -->
+  <section id="capabilities">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Capabilities</span>
+        <h2>Large Machining & Fabrication Services</h2>
+        <p>We manufacture large and heavy industrial parts according to your drawings and technical requirements.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">🏗️</div>
+          <h3>Floor-Type Boring & Milling</h3>
+          <p>Large box structures, machine frames, bases, housings and heavy parts with high dimensional accuracy.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>Heavy CNC Machining</h3>
+          <p>Large CNC milling, drilling, tapping and boring for heavy industrial components.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔩</div>
+          <h3>Large Part Turning</h3>
+          <p>Flanges, shafts, rings, cylinders and other large cylindrical parts.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔥</div>
+          <h3>Welding & Fabrication</h3>
+          <p>Heavy structural welding, frames, bases, tanks and weldments with post-weld machining.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📐</div>
+          <h3>Milling & Drilling</h3>
+          <p>Precision milling, drilling, boring and tapping for large workpieces.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>Assembly & Inspection</h3>
+          <p>Light assembly, dimensional inspection and export-ready packaging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials -->
+  <section class="section-gray">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Materials</span>
+        <h2>Materials We Machine & Weld</h2>
+        <p>Send us your drawing and material requirement. We will recommend the suitable process.</p>
+      </div>
+      <div class="materials">
+        <span class="material-chip">Carbon Steel</span>
+        <span class="material-chip">Alloy Steel</span>
+        <span class="material-chip">Stainless Steel</span>
+        <span class="material-chip">Cast Iron</span>
+        <span class="material-chip">Cast Steel</span>
+        <span class="material-chip">Aluminum</span>
+        <span class="material-chip">Q235 / Q345</span>
+        <span class="material-chip">42CrMo</span>
+        <span class="material-chip">45# Steel</span>
+        <span class="material-chip">Custom Materials</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment -->
+  <section id="equipment">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Equipment</span>
+        <h2>Machining & Welding Equipment</h2>
+        <p>Our equipment supports large and heavy part production. Contact us for detailed specifications.</p>
+      </div>
+      <div class="equipment-list">
+        <div class="equipment-item">Floor-Type Boring & Milling Machine <small>Large travel, heavy load capacity, high precision</small></div>
+        <div class="equipment-item">Gantry CNC Machining Center <small>Large worktable, multi-axis machining</small></div>
+        <div class="equipment-item">Heavy-Duty CNC Lathe / Vertical Lathe <small>Large swing diameter, heavy load capacity</small></div>
+        <div class="equipment-item">Welding Machines <small>Manual / MIG / TIG / Submerged Arc Welding</small></div>
+        <div class="equipment-item">Milling & Drilling Machines <small>Various models for large parts</small></div>
+        <div class="equipment-item">Inspection Equipment <small>Calipers, micrometers, levels, CMM or laser tracker</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="section-gray">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Industries</span>
+        <h2>Industries We Serve</h2>
+        <p>Our large machining and welding services support heavy industrial applications.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">🏭</div>
+          <h3>Heavy Machinery</h3>
+          <p>Machine frames, bases, housings and large structural parts.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⛏️</div>
+          <h3>Mining & Cement</h3>
+          <p>Crusher parts, mill components, kiln parts and wear-resistant structures.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Energy & Power</h3>
+          <p>Large shafts, flanges, rings and welded assemblies.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚢</div>
+          <h3>Shipbuilding & Port</h3>
+          <p>Marine components, port machinery parts and heavy weldments.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛠️</div>
+          <h3>Steel & Metallurgy</h3>
+          <p>Rolling mill parts, frames, bearings and large machined components.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧱</div>
+          <h3>Construction Equipment</h3>
+          <p>Large arms, bases, buckets and structural welding parts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality -->
+  <section id="quality">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Quality Control</span>
+        <h2>Quality Is Built Into Every Step</h2>
+        <p>From material preparation to final inspection, every large part is checked carefully.</p>
+      </div>
+      <div class="grid-2">
+        <div class="quality-box">
+          <h3>Inspection Process</h3>
+          <ul class="check-list">
+            <li>Drawing and technical review before production</li>
+            <li>Material verification and preparation</li>
+            <li>In-process dimensional inspection</li>
+            <li>Welding quality control and visual inspection</li>
+            <li>Final dimension and appearance inspection</li>
+            <li>Inspection report and photos before shipment</li>
+          </ul>
+        </div>
+        <div class="quality-box">
+          <h3>Our Advantages</h3>
+          <ul class="check-list">
+            <li>Large part machining experience</li>
+            <li>Floor-type boring & milling capability</li>
+            <li>Welding and post-weld machining</li>
+            <li>Custom manufacturing according to drawings</li>
+            <li>Export packing and global shipping support</li>
+            <li>Confidential handling of customer drawings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section-gray">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">How It Works</span>
+        <h2>From Drawing to Delivery</h2>
+        <p>A simple and transparent process for overseas buyers.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h4>Send Drawings</h4>
+          <p>Send 2D/3D files, material, quantity and technical requirements.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h4>Review & Quote</h4>
+          <p>We review manufacturability and provide a detailed quotation.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h4>Production</h4>
+          <p>Machining, welding and fabrication according to approved drawings.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h4>Inspection</h4>
+          <p>Dimensional and visual inspection before shipment.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h4>Shipping</h4>
+          <p>Export packing and delivery by sea, air or express.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">FAQ</span>
+        <h2>Common Questions from Overseas Buyers</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>What files should I send for a quotation?</summary>
+          <p>Please send 2D drawings (PDF/DWG/DXF) and 3D models (STEP/IGES/X_T) if available. Also include material, quantity, tolerance and surface finish requirements.</p>
+        </details>
+        <details>
+          <summary>Can you machine very large parts?</summary>
+          <p>Yes. We specialize in large-scale machining, including floor-type boring & milling. Please send the part size and weight so we can confirm the suitable machine.</p>
+        </details>
+        <details>
+          <summary>Do you provide welding and post-weld machining?</summary>
+          <p>Yes. We can weld heavy structures and then machine critical surfaces to meet your dimensional requirements.</p>
+        </details>
+        <details>
+          <summary>How fast can I get a quote?</summary>
+          <p>Usually within 24–48 hours after we receive complete drawings and requirements. Complex projects may take longer.</p>
+        </details>
+        <details>
+          <summary>Can you sign an NDA?</summary>
+          <p>Yes. We respect customer intellectual property and can sign an NDA before receiving your drawings.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Quote -->
+  <section id="quote" class="section-gray">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Contact</span>
+        <h2>Get Your Machining & Welding Quote</h2>
+        <p>Send your project details and our engineer will reply as soon as possible.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Haochao Machinery Co., Ltd.</h3>
+          <p>浩潮机械有限公司<br />Large machining, floor boring and welding fabrication.</p>
+          <div class="contact-line">📧 <span><strong>Email:</strong> richardleung3671@gmail.com</span></div>
+          <div class="contact-line">📱 <span><strong>WhatsApp:</strong> +86 13074243671</span></div>
+          <div class="contact-line">📞 <span><strong>Phone:</strong> +86 13074243671</span></div>
+          <div class="contact-line">🏭 <span><strong>Factory:</strong> Haochao Machinery Co., Ltd., Building 1, Jiaokou Industrial Area, Nanhai District, Foshan, Guangdong, China</span></div>
+          <div class="contact-line">🕒 <span><strong>Response:</strong> Within 24 hours</span></div>
+        </div>
+
+        <form class="quote-form" id="quoteForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="you@company.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Company name" />
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <input type="text" id="country" name="country" placeholder="Country" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="text" id="phone" name="phone" placeholder="+1 234 567 890" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option>Floor-Type Boring & Milling</option>
+                <option>Heavy CNC Machining</option>
+                <option>Large Part Turning</option>
+                <option>Welding & Fabrication</option>
+                <option>Milling & Drilling</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Project Details *</label>
+            <textarea id="message" name="message" required placeholder="Material, dimensions, weight, quantity, tolerance, surface finish, etc."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="file">Upload Drawing (optional)</label>
+            <input type="file" id="file" name="file" />
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Inquiry</button>
+          <div class="form-msg" id="formMsg">
+            Thank you! Your inquiry has been received. We will reply within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Haochao Machinery Co., Ltd.</h4>
+          <p>浩潮机械有限公司 — Large machining, floor-type boring & milling, welding and fabrication for heavy industry.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="#capabilities">Capabilities</a></p>
+          <p><a href="#equipment">Equipment</a></p>
+          <p><a href="#industries">Industries</a></p>
+          <p><a href="#quote">Get a Quote</a></p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Email: richardleung3671@gmail.com</p>
+          <p>WhatsApp: +86 13074243671</p>
+          <p>Location: 中国广东省佛山市南海区滘口工业区1座浩潮机械有限公司</p>
+        </div>
+      </div>
+      <div class="copyright">
+        © <span id="year"></span> Haochao Machinery Co., Ltd. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    const quoteForm = document.getElementById('quoteForm');
+    const formMsg = document.getElementById('formMsg');
+
+    quoteForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      formMsg.style.display = 'block';
+      this.reset();
+      setTimeout(() => {
+        formMsg.style.display = 'none';
+      }, 5000);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
