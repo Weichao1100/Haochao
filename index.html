@@ -896,7 +896,22 @@
           <div class="contact-line">🕒 <span><strong>Response:</strong> Within 24 hours</span></div>
         </div>
 
-        <form class="quote-form" id="quoteForm">
+        <form
+          class="quote-form"
+          id="quoteForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="75dd3024-599f-4fe2-bdbb-193cac76fb46">
+          
+          <!-- 自定义邮件标题和发件人 -->
+          <input type="hidden" name="subject" value="浩潮机械官网新询盘 - Haochao Machinery Quote">
+          <input type="hidden" name="from_name" value="Haochao Machinery Website">
+          
+          <!-- 蜜罐字段防垃圾机器人 -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name *</label>
@@ -943,10 +958,9 @@
             <textarea id="message" name="message" required placeholder="Material, dimensions, weight, quantity, tolerance, surface finish, etc."></textarea>
           </div>
 
-          <div class="form-group">
-            <label for="file">Upload Drawing (optional)</label>
-            <input type="file" id="file" name="file" />
-          </div>
+          <p style="font-size:13px;color:#64748b;margin-bottom:16px;">
+            请将图纸发送至：richardleung3671@gmail.com 或 WhatsApp：+86 13074243671
+          </p>
 
           <button type="submit" class="btn btn-primary" style="width:100%;">Send Inquiry</button>
           <div class="form-msg" id="formMsg">
@@ -976,7 +990,7 @@
           <h4>Contact</h4>
           <p>Email: richardleung3671@gmail.com</p>
           <p>WhatsApp: +86 13074243671</p>
-          <p>Location: 中国广东省佛山市南海区滘口工业区1座浩潮机械有限公司</p>
+          <p>Location: Building 1, Jiaokou Industrial Area, Nanhai District, Foshan, Guangdong, China</p>
         </div>
       </div>
       <div class="copyright">
@@ -999,18 +1013,56 @@
       });
     });
 
+    // Web3Forms AJAX 提交逻辑
     const quoteForm = document.getElementById('quoteForm');
     const formMsg = document.getElementById('formMsg');
 
-    quoteForm.addEventListener('submit', function (e) {
+    quoteForm.addEventListener('submit', async function (e) {
       e.preventDefault();
-      formMsg.style.display = 'block';
-      this.reset();
-      setTimeout(() => {
-        formMsg.style.display = 'none';
-      }, 5000);
+
+      const submitBtn = quoteForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      
+      // 禁用按钮，防止重复提交
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(quoteForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      try {
+        const res = await fetch(quoteForm.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          formMsg.textContent = 'Thank you! Your inquiry has been received. We will reply within 24 hours.';
+          formMsg.style.display = 'block';
+          quoteForm.reset();
+          setTimeout(() => {
+            formMsg.style.display = 'none';
+          }, 6000);
+        } else {
+          alert('提交失败：' + (result.message || '请稍后重试'));
+        }
+      } catch (error) {
+        alert('网络错误，请检查网络后重试。');
+      } finally {
+        // 恢复按钮状态
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
     });
 
+    // 年份自动更新
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
